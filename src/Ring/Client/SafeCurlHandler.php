@@ -4,7 +4,7 @@ namespace Graby\Ring\Client;
 
 use fin1te\SafeCurl\Exception;
 use fin1te\SafeCurl\SafeCurl;
-use GuzzleHttp\Ring\Client\CurlFactory;
+use GuzzleHttp\Handler\CurlFactory;
 use GuzzleHttp\Ring\Core;
 use GuzzleHttp\Ring\Future\CompletedFutureArray;
 use GuzzleHttp\Stream\Stream;
@@ -20,7 +20,7 @@ class SafeCurlHandler
 
     public function __construct()
     {
-        $this->factory = new CurlFactory();
+        $this->factory = new CurlFactory(5);
     }
 
     /**
